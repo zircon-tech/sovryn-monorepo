@@ -49,6 +49,7 @@ export function BrowserWalletSelector(props: Props) {
             onClick={() => props.onWalletSelected(ProviderType.WEB3)}
             linkHref='https://chrome.google.com/webstore/detail/nifty-wallet/jbdaocneiiinmjbjlgalhcelgbejmnid'
             linkTitle={t(translations.dialogs.browserSelector.download)}
+            id="niftyTypeBtn"
           />
         )}
         {['metamask', 'unknown'].includes(wallet) && (
@@ -58,6 +59,7 @@ export function BrowserWalletSelector(props: Props) {
             onClick={() => props.onWalletSelected(ProviderType.WEB3)}
             linkHref='https://metamask.io/download.html'
             linkTitle={t(translations.dialogs.browserSelector.download)}
+            id="metamaskTypeBtn"
           />
         )}
         <Item

@@ -14,6 +14,7 @@ interface Props {
   linkHref?: string;
   small?: boolean;
   href?: string;
+  id?: string;
 }
 
 export function Item(props: Props) {
@@ -23,6 +24,7 @@ export function Item(props: Props) {
         [style.container_big]: props.linkHref && props.linkTitle,
         [style.small]: props.small,
       })}
+
     >
       <button
         type='button'
@@ -32,6 +34,7 @@ export function Item(props: Props) {
         })}
         disabled={props.disabled}
         onClick={props.onClick}
+        id={props.id}
       >
         <div
           className={style.image}
