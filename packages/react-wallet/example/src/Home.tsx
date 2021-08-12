@@ -1,27 +1,20 @@
 import React, { useCallback, useContext, useEffect } from 'react';
 
-import {
-  HardwareWallet,
-  isHardwareWallet,
-  Web3Node,
-} from '@sovryn/wallet';
+import { HardwareWallet, isHardwareWallet, Web3Node } from '@sovryn/wallet';
 import {
   WalletButton,
   WalletContext,
   walletService,
 } from '@sovryn/react-wallet';
 import '@sovryn/react-wallet/index.css';
+import { WalletButtonContainer } from './styled';
 
 const node = new Web3Node('https://public-node.testnet.rsk.co');
 
 export const Home = () => {
-  const {
-    address,
-    connected,
-    disconnect,
-    chainId,
-    provider,
-  } = useContext(WalletContext);
+  const { address, connected, disconnect, chainId, provider } = useContext(
+    WalletContext,
+  );
 
   const sign = useCallback(async () => {
     try {
@@ -86,7 +79,11 @@ export const Home = () => {
 
   return (
     <div>
-      {!connected && <WalletButton />}
+      {!connected && (
+        <WalletButtonContainer>
+          <WalletButton />
+        </WalletButtonContainer>
+      )}
       {connected && (
         <React.Fragment>
           <div>

@@ -1,11 +1,12 @@
 import * as React from 'react';
-import { useTranslation } from 'react-i18next';
-import { ItemList } from '../../ItemList';
-import { Item } from '../../Item';
-import { images } from '../../../assets/images';
+// import { useTranslation } from 'react-i18next';
+// import { ItemList } from '../../ItemList';
+// import { Item } from '../../Item';
+// import { images } from '../../../assets/images';
 import { WalletConnectionStep } from '../../WalletConnectionView/types';
-import { BottomLinkContainer } from '../../BottomLinkContainer';
-import { translations } from '../../../locales/i18n';
+// import { BottomLinkContainer } from '../../BottomLinkContainer';
+// import { translations } from '../../../locales/i18n';
+import { useEffect } from 'react';
 
 interface Props {
   onStep: (value: WalletConnectionStep) => void;
@@ -13,10 +14,15 @@ interface Props {
 }
 
 export function ProviderTypeSelector(props: Props) {
-  const { t } = useTranslation();
+  // const { t } = useTranslation();
+
+  useEffect(() => {
+    props.onStep(WalletConnectionStep.BROWSER_PROVIDERS);
+  }, []);
+
   return (
     <div>
-      <h1>{t(translations.dialogs.providerTypes.title)}</h1>
+      {/* <h1>{t(translations.dialogs.providerTypes.title)}</h1>
       <ItemList>
         <Item
           image={images.hardwareWallets}
@@ -46,7 +52,7 @@ export function ProviderTypeSelector(props: Props) {
             {t(translations.dialogs.providerTypes.instructions)}
           </a>
         </BottomLinkContainer>
-      )}
+      )} */}
     </div>
   );
 }

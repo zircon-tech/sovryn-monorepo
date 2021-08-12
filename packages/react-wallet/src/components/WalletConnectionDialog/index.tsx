@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import { useMemo } from 'react';
-import { Dialog } from '../../containers/Dialog';
+// import { useMemo } from 'react';
 import { WalletConnectionStep } from '../WalletConnectionView/types';
 import { WalletConnectionView } from '../WalletConnectionView';
+import { WalletPopup } from '../WalletPopup';
 
 type WalletConnectionDialogProps = {
   portalTargetId?: string;
@@ -11,32 +11,23 @@ type WalletConnectionDialogProps = {
 };
 
 export function WalletConnectionDialog({
-  portalTargetId,
-  isOpen,
+  // portalTargetId,
+  // isOpen,
   onClose,
 }: WalletConnectionDialogProps) {
   const [step, setStep] = useState<WalletConnectionStep>(
     WalletConnectionStep.NONE,
   );
-  const size = useMemo(() => {
-    switch (step) {
-      default:
-        return 'large';
-      case WalletConnectionStep.HARDWARE_PATH_SELECTOR:
-        return 'small';
-      case WalletConnectionStep.HARDWARE_ADDRESS_SELECTOR:
-        return 'large';
-    }
-  }, [step]);
+
+  console.log(step);
 
   return (
-    <Dialog
-      onClose={onClose}
-      size={size}
-      isOpen={isOpen}
-      portalTargetId={portalTargetId}
-    >
-      <WalletConnectionView onStep={setStep} onCompleted={onClose} />
-    </Dialog>
+    <WalletPopup>
+      <WalletConnectionView
+        onStep={setStep}
+        onCompleted={onClose}
+        hideInstructionLink={true}
+      />
+    </WalletPopup>
   );
 }

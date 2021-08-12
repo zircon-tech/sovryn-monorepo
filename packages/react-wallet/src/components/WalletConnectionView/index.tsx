@@ -8,7 +8,7 @@ import {
 } from '@sovryn/wallet';
 import { ProviderTypeSelector } from '../WalletConnectionSteps/ProviderTypeSelector';
 import { BrowserWalletSelector } from '../WalletConnectionSteps/BrowserWalletSelector';
-import { BackButton } from '../BackButton';
+// import { BackButton } from '../BackButton';
 import { HardwareWalletSelector } from '../WalletConnectionSteps/HardwareWalletSelector';
 import { HardwarePathChooser } from '../WalletConnectionSteps/HardwarePathChooser';
 import { HardwareAddressSelector } from '../WalletConnectionSteps/HardwareAddressSelector';
@@ -131,7 +131,7 @@ export const WalletConnectionView: React.FC<WalletConnectionViewProps> = props =
 
   return (
     <div>
-      {[
+      {/* {[
         WalletConnectionStep.BROWSER_PROVIDERS,
         WalletConnectionStep.HARDWARE_PROVIDERS,
         WalletConnectionStep.HARDWARE_PATH_SELECTOR,
@@ -140,7 +140,7 @@ export const WalletConnectionView: React.FC<WalletConnectionViewProps> = props =
         <BackButton
           onClick={() => onStepChange(WalletConnectionStep.PROVIDERS)}
         />
-      )}
+      )} */}
       {state.step === WalletConnectionStep.PROVIDERS && (
         <ProviderTypeSelector
           onStep={onStepChange}
