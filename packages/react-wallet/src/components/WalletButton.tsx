@@ -16,17 +16,17 @@ const Button = styled.button`
   border: solid 2px rgb(50, 240, 95);
   background-color: rgb(50, 240, 95);
   cursor: pointer;
-  :focus{
+  :focus {
     outline: none;
   }
-  `;
+`;
 
 export function WalletButton() {
   const context = React.useContext(WalletContext);
+  console.log(context.close);
   return (
     <Button
-      onClick={() => context.connect()}
-      disabled={context.connecting}
+      onClick={() => (context.connecting ? context.close() : context.connect())}
     >
       {context.connecting ? 'CONNECTING' : 'CONNECT WALLET'}
     </Button>

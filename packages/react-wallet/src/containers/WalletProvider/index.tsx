@@ -77,6 +77,11 @@ export function WalletProvider(props: Props) {
     setState(state => ({ ...state, connecting: false }));
   }, [setShowConnectionDialog, setState]);
 
+  const close = useCallback(() => {
+    setShowConnectionDialog(false);
+    setState(state => ({ ...state, connecting: false }));
+  }, [setShowConnectionDialog, setState]);
+
   const disconnect = useCallback(() => {
     setState(state => ({
       ...state,
@@ -337,6 +342,7 @@ export function WalletProvider(props: Props) {
       ...state,
       set: setState,
       connect,
+      close,
       disconnect,
       reconnect,
       setConnectedWallet,
@@ -348,6 +354,7 @@ export function WalletProvider(props: Props) {
       setState,
       connect,
       reconnect,
+      close,
       disconnect,
       setConnectedWallet,
       unlockDeterministicWallet,

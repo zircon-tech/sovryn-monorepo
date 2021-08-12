@@ -131,16 +131,6 @@ export const WalletConnectionView: React.FC<WalletConnectionViewProps> = props =
 
   return (
     <div>
-      {/* {[
-        WalletConnectionStep.BROWSER_PROVIDERS,
-        WalletConnectionStep.HARDWARE_PROVIDERS,
-        WalletConnectionStep.HARDWARE_PATH_SELECTOR,
-        WalletConnectionStep.WALLET_CONNECT_PROVIDERS,
-      ].includes(state.step) && (
-        <BackButton
-          onClick={() => onStepChange(WalletConnectionStep.PROVIDERS)}
-        />
-      )} */}
       {state.step === WalletConnectionStep.PROVIDERS && (
         <ProviderTypeSelector
           onStep={onStepChange}

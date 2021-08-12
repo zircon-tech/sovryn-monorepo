@@ -19,8 +19,6 @@ export function WalletConnectionDialog({
     WalletConnectionStep.NONE,
   );
 
-  console.log(step);
-
   return (
     <WalletPopup>
       <WalletConnectionView

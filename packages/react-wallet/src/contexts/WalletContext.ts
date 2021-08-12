@@ -30,11 +30,15 @@ export type WalletContextFunctionsType = {
    */
   connect: () => void;
   /**
+   * Close wallet popup
+   */
+  close: () => void;
+  /**
    * Disconnect from wallet, and reset context values
    */
   disconnect: () => void;
   /**
-   * Registers the passed wallet with the WalletService 
+   * Registers the passed wallet with the WalletService
    */
   setConnectedWallet: (wallet: FullWallet) => Promise<boolean>;
   /**
@@ -70,6 +74,9 @@ const defaultValue: WalletContextType = {
   connecting: false,
   set: () => {
     throw new Error('set() has not been set!');
+  },
+  close: () => {
+    throw new Error('close() has not been set!');
   },
   disconnect: () => {
     throw new Error('disconnect() has not been set!');
