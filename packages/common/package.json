@@ -1,6 +1,6 @@
 {
   "name": "@babelfish/common",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Library for common helpers.",
   "main": "dist/index.js",
   "module": "dist/index.es.js",
