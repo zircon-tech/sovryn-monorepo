@@ -24,7 +24,7 @@ export type WalletConnectionViewHwOptions = {
 };
 
 type WalletConnectionViewProps = {
-  onStep: (value: WalletConnectionStep) => void;
+  onStep?: (value: WalletConnectionStep) => void;
   onCompleted: (result: boolean) => void;
   hideInstructionLink?: boolean;
 };

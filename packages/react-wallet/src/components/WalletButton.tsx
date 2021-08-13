@@ -23,12 +23,12 @@ const Button = styled.button`
 
 export function WalletButton() {
   const context = React.useContext(WalletContext);
-  console.log(context.close);
+  
   return (
     <Button
       onClick={() => (context.connecting ? context.close() : context.connect())}
     >
-      {context.connecting ? 'CONNECTING' : 'CONNECT WALLET'}
+      {context.connecting ? 'SELECT WALLET' : 'CONNECT WALLET'}
     </Button>
   );
 }

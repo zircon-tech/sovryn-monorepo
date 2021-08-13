@@ -5,6 +5,6 @@ interface IProps {
   children: React.ReactNode;
 }
 
-export const WalletPopup = ({ children }: IProps) => {
-  return <PopUp>{children}</PopUp>;
-};
+export const WalletPopup = React.forwardRef(({ children }: IProps) => {
+  return <PopUp >{children}</PopUp>;
+});

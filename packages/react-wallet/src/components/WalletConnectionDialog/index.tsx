@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
-// import { useMemo } from 'react';
-import { WalletConnectionStep } from '../WalletConnectionView/types';
+import React, { useContext } from 'react';
+import { WalletContext } from '../../contexts/WalletContext';
 import { WalletConnectionView } from '../WalletConnectionView';
 import { WalletPopup } from '../WalletPopup';
+// @ts-ignore
+import useOnClickOutside from 'use-onclickoutside';
 
 type WalletConnectionDialogProps = {
   portalTargetId?: string;
@@ -11,21 +12,17 @@ type WalletConnectionDialogProps = {
 };
 
 export function WalletConnectionDialog({
-  // portalTargetId,
-  // isOpen,
   onClose,
 }: WalletConnectionDialogProps) {
-  const [step, setStep] = useState<WalletConnectionStep>(
-    WalletConnectionStep.NONE,
-  );
+  const context = useContext(WalletContext);
+
+  const ref = React.useRef(null);
+  useOnClickOutside(ref, () => context.connecting && context.close());
 
   return (
-    <WalletPopup>
-      <WalletConnectionView
-        onStep={setStep}
-        onCompleted={onClose}
-        hideInstructionLink={true}
-      />
+    // @ts-ignore: Unreachable code error
+    <WalletPopup ref={ref}>
+      <WalletConnectionView onCompleted={onClose} hideInstructionLink={true} />
     </WalletPopup>
   );
 }
