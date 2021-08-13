@@ -1,0 +1,1 @@
+{"version":3,"file":"rsk-test.js","sourceRoot":"","sources":["../../../../src/dictionaries/networks/types/rsk-test.ts"],"names":[],"mappings":"AAAA,eAAe;IACb,IAAI,EAAE,SAAS;IACf,SAAS,EAAE,aAAa;IACxB,OAAO,EAAE,EAAE;IACX,GAAG,EAAE;QACH,QAAQ,EAAE,4CAA4C;QACtD,YAAY,EAAE,KAAK;QACnB,YAAY,EAAE,CAAC,KAAK,CAAC;KACtB;IACD,YAAY,EAAE,OAAO;CACtB,CAAC"}

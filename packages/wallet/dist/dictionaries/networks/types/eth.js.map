@@ -1,0 +1,1 @@
+{"version":3,"file":"eth.js","sourceRoot":"","sources":["../../../../src/dictionaries/networks/types/eth.ts"],"names":[],"mappings":"AAAA,eAAe;IACb,IAAI,EAAE,KAAK;IACX,SAAS,EAAE,UAAU;IACrB,OAAO,EAAE,CAAC;IACV,GAAG,EAAE;QACH,QAAQ,EAAE,4CAA4C;QACtD,YAAY,EAAE,KAAK;QACnB,aAAa,EAAE,WAAW;QAC1B,YAAY,EAAE,CAAC,KAAK,EAAE,KAAK,CAAC;KAC7B;IACD,YAAY,EAAE,KAAK;CACpB,CAAC"}

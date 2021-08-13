@@ -1,0 +1,1 @@
+{"version":3,"file":"ledger.js","sourceRoot":"","sources":["../../../src/wallets/bip44/ledger.ts"],"names":[],"mappings":"AAAA,OAAO,EAAS,cAAc,EAAE,kBAAkB,EAAE,UAAU,EAAE,MAAM,SAAS,CAAC;AAEhF,MAAM,CAAC,IAAM,WAAW,GAAY;IAClC,cAAc;IACd,kBAAkB;IAClB,UAAU;CACX,CAAC"}

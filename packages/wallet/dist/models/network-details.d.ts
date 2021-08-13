@@ -1,0 +1,33 @@
+import { ConnectionType, ProviderType } from '../constants';
+import type { DPath } from '../wallets/bip44/paths';
+export declare class NetworkDetails {
+    private _chainId;
+    private _name;
+    private _networkType;
+    private _currencyName;
+    private _nodeUrl;
+    private _logo;
+    private _explorerTx;
+    private _explorerAdr;
+    private _networkId;
+    private _dPaths;
+    constructor(_chainId: number, _name: string, _networkType: ConnectionType, _currencyName: string, _nodeUrl: string);
+    setNodeUrl(value: string): this;
+    getNodeUrl(): string;
+    setExplorerTxUrl(value: string): this;
+    getExplorerTxUrl(): string;
+    setExplorerAdrUrl(value: string): this;
+    getExplorerAdrUrl(): string;
+    setLogo(value: string): this;
+    getLogo(): string;
+    setNetworkId(value: number): this;
+    getNetworkId(): number;
+    getChainId(): number;
+    getName(): string;
+    getCurrencyName(): string;
+    getNetworkType(): ConnectionType;
+    setDPaths(dPaths: Map<ProviderType, DPath[]>): this;
+    getDPaths(): Map<ProviderType, DPath[]>;
+    setWalletDPaths(wallet: ProviderType, paths: DPath[]): this;
+    getWalletDPaths(wallet: ProviderType): DPath[] | undefined;
+}
