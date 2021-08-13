@@ -1,6 +1,6 @@
 {
   "name": "@babelfish/wallet",
-  "version": "1.0.0",
+  "version": "2.1.2",
   "description": "Library for interacting with RSK and ETH wallets.",
   "author": "Rytis Grincevicius",
   "license": "MIT",

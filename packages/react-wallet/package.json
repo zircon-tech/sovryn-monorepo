@@ -1,6 +1,6 @@
 {
   "name": "@babelfish/react-wallet",
-  "version": "1.0.0",
+  "version": "2.1.2",
   "description": "Made with create-react-library",
   "author": "Rytis Grincevicius",
   "license": "MIT",
@@ -24,9 +24,9 @@
     "deploy": "gh-pages -d example/build"
   },
   "dependencies": {
+    "@babelfish/wallet": "^2.1.2",
     "@blueprintjs/core": "^3.44.2",
     "@hookstate/core": "^3.0.6",
-    "@babelfish/wallet": "1.0.0",
     "@types/classnames": "^2.2.11",
     "@types/react-copy-to-clipboard": "^5.0.0",
     "classnames": "^2.2.6",
