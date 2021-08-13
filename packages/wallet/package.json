@@ -1,6 +1,6 @@
 {
   "name": "@babelfish/wallet",
-  "version": "2.0.2",
+  "version": "1.0.0",
   "description": "Library for interacting with RSK and ETH wallets.",
   "author": "Rytis Grincevicius",
   "license": "MIT",
@@ -28,7 +28,7 @@
     "@ledgerhq/hw-transport-web-ble": "^5.51.1",
     "@ledgerhq/hw-transport-webusb": "^5.53.1",
     "@portis/web3": "^3.0.8",
-    "@sovryn/common": "^2.0.1",
+    "@sovryn/common": "1.0.0",
     "@trezor/rollout": "^1.0.7",
     "@walletconnect/web3-provider": "^1.4.0",
     "ethereumjs-common": "1.5.2",
