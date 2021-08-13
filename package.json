@@ -1,5 +1,5 @@
 {
-  "name": "@babelfish-monorepo",
+  "name": "babelfish-monorepo",
   "private": false,
   "scripts": {
     "lerna:bootstrap": "yarn build:common && yarn build:wallet && yarn build:react-wallet && npx lerna bootstrap --contents dist",
