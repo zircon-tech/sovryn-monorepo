@@ -1,6 +1,6 @@
 {
-  "name": "sovryn-monorepo",
-  "private": true,
+  "name": "babelfish-monorepo",
+  "private": false,
   "scripts": {
     "lerna:bootstrap": "yarn build:common && yarn build:wallet && yarn build:react-wallet && npx lerna bootstrap --contents dist",
     "lerna:publish": "npx lerna publish --contents dist",
@@ -28,7 +28,7 @@
     ]
   },
   "changelog": {
-    "repo": "DistributedCollective/sovryn-monorepo",
+    "repo": "zircon-tech/sovryn-monorepo",
     "labels": {
       "breaking": ":boom: Breaking Change",
       "enhancement": ":rocket: Enhancement",
@@ -38,5 +38,5 @@
     },
     "cacheDir": ".changelog"
   },
-  "version": "0.0.0"
+  "version": "1.0.0"
 }
