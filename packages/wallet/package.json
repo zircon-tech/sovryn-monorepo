@@ -1,5 +1,5 @@
 {
-  "name": "@sovryn/wallet",
+  "name": "babelfish-monorepo/wallet",
   "version": "2.0.0",
   "description": "Library for interacting with RSK and ETH wallets.",
   "author": "Rytis Grincevicius",
